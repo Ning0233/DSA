@@ -1,2 +1,2 @@
 # DSA
-This is a personal study repo for Leetcode and Hackerrank and DSA
+This is a study repo for Leetcode and Hackerrank and DSA
