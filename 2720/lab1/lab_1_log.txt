@@ -1,0 +1,71 @@
+Lab1 Output
+================
+Exceution time for 100 runs for array size 10: 7.23260163795203e-05s 
+Memory used for array: 48 bytes
+Memory used for result: 28 bytes
+Exceution time for 100 runs for array size 100: 0.0009994980064220726s 
+Memory used for array: 48 bytes
+Memory used for result: 28 bytes
+Exceution time for 100 runs for array size 1000: 0.004797360015800223s 
+Memory used for array: 48 bytes
+Memory used for result: 28 bytes
+Exceution time for 100 runs for array size 10000: 0.0460995500034187s 
+Memory used for array: 48 bytes
+Memory used for result: 28 bytes
+Exceution time for 100 runs for matrix size 10: 0.0004767529899254441s 
+Memory used for array: 56 
+Memory used for result: 928
+Exceution time for 100 runs for matrix size 50: 0.0009721289970912039s 
+Memory used for array: 56 
+Memory used for result: 20128
+Exceution time for 100 runs for matrix size 100: 0.0015438129776157439s 
+Memory used for array: 56 
+Memory used for result: 80128
+
+Lab1 report
+==================
+Time complexity: 
+
+sum_array: 
+def sum_arr(arr):
+    total = 0 
+    for i in arr:
+        total += i
+    return total
+this loop's time complexity is O(n), the return and total variable is O(1), 
+total is 1+n+1+1
+therefore overall is O(n)
+observation:
+the time is increasing, but not rapidly;  time is increasing as the array get larger. it is convencing that the time complexity is O(n)
+
+sum_matrix:
+def sum_matrix(A, B):
+    matrixA = np.array(A)
+    matrixB = np.array(B)
+    return matrixA + matrixB
+converting list to NumPy array takes O(n^2), adding 2 NumPy array also takes O(n^2)
+total is: n^2 + n^2 + n^2
+therefore overall is O(n^2)
+observation:
+the time is rapidly increasing as the matrix get larer. it is convencing that the time complexity is O(n^2)
+
+
+Space complexity:
+
+sum_array:
+arr itself is n, the result is always 1(because it is constant space used)
+total is n + 1
+overall space complexity is O(n)
+observation:
+space required remains the same because of the limited array size, as the array gets larger, the required space should be predeicted to get larger
+
+sum_matrix:
+each matrix require O(n^2) because it's 2D, matrix result is also O(n^2) because it is also a 2D array
+total is n^2 + n^2 + n^2
+overall space complexity is O(n^2)
+observation:
+the time is rapidly increasing as the matrix get larer. it is convencing that the time complexity is O(n^2)
+
+Efficiency of Algorithm:
+sum_arr: efficient; even for large arrays as the time complexity is O(n)
+sum_matrix: not as efficient; larger array takes too much time and space, because the time and space usage grows quadraticlly

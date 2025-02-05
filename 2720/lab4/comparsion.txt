@@ -1,0 +1,7 @@
+Both classes are sufficient to implement the functionality of a queue; however, there are differences between them.
+
+When using a linked list for a queue, both enqueue and dequeue operations are very efficient at O(1). However, for a Python list, dequeue is O(n) because, while append is amortized O(1), accessing and removing the first element requires shifting all other elements.
+
+A linked list is very efficient in terms of space, while resizing a Python list requires more memory each time it is resized. A linked list does not allow direct access to an index (unless you implement an additional function), while a Python list does.
+
+In terms of implementation, a Python list is easier to code.

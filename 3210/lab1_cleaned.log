@@ -1,0 +1,179 @@
+Script started on Wed 22 Jan 2025 03:31:49 PM EST
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[?1034h[nzhuang1@gsuad.gsu.edu@snowball ~]$ cat hello.c 
+/* 
+ *    hello world
+ *    */
+
+#include <stdio.h>
+
+int main (int argc, char *argv[]) {
+
+   printf("hello world.\n"); 
+
+   return 0;
+}
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ vim hello.c 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"hello.c" 12L, 135C[>c[1;1H[34m/* 
+ *    hello world
+ *    */[m
+
+[35m#include [m[31m<stdio.h>[m
+
+[32mint[m main ([32mint[m argc, [32mchar[m *argv[]) [106m{[m[9;4Hprintf([31m"hello world.[m[35m\n[m[31m"[m);[11;4H[38;5;130mreturn[m [31m0[m;
+[106m}[m
+[94m~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [m[42;140H12,1[10CAll[12;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[96m/* 
+ *    hello world
+ *    */[m
+
+[38;5;81m#include [m[95m<stdio.h>[m
+
+[38;5;121mint[m main ([38;5;121mint[m argc, [38;5;121mchar[m *argv[]) [46m{[m[9;4Hprintf([95m"hello world.[m[38;5;224m\n[m[95m"[m);[11;4H[93mreturn[m [95m0[m;
+[46m}[m
+[94m~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [m[42;140H12,1[10CAll"hello.c" 12L, 135C[12;1H[?12l[?25h[?25l[42;1H[1m-- INSERT --[m[42;13H[K[42;140H12,1[10CAll[12;1H[?12l[?25h[?25l[11;13H}
+[94m~                                                                                                                                                            [m[11;13H[46m}[m[42;141H1,13[11;13H[?12l[?25h[?25l}[46m }[m[11;13H[K[42;144H2[11;12H[?12l[?25h[?25l}[46m }[m[11;12H[K[42;144H1[11;11H[?12l[?25h[42;1H[K[11;10H[?25l[7;35H{[11;11H}[42;140H11,10[9CAll[11;10H[?12l[?25h[?25l[42;140H[K[42;1H:[?12l[?25h1[?25l[?12l[?25h[?25l[139C1,1[11CAll[1;1H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h[?25l [?12l[?25hl[?25l[?12l[?25hi[?25l[?12l[?25hn[?25l[?12l[?25he[?25l[?12l[?25h[?25l[97m[41mE518: Unknown option: line[m[113C1,1[11CAll[1;1H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h[?25l [?12l[?25hn[?25l[?12l[?25hu[?25l[?12l[?25hm[?25l[?12l[?25hb[?25l[?12l[?25he[?25l[?12l[?25hr[?25l[?12l[?25h[?25l[1;1H[93m  1 [m[96m/* [m
+[93m  2 [m[1C[96m*    hello world[m
+[93m  3 [m[1C[96m*    */[m
+[93m  4 
+  5 [m[38;5;81m#include [m[95m<stdio.h>[m
+[93m  6 
+  7 [m[38;5;121mint[m main ([38;5;121mint[m argc, [38;5;121mchar[m *argv[]) {
+[93m  8 
+  9 [m   printf([95m"hello world.[m[38;5;224m\n[m[95m"[m);
+[93m 10 
+ 11 [m   [1C[93meturn[m }[42;140H1,1[11CAll[1;5H[?12l[?25h[?25l[42;1H10 fewer lines[42;140H[K[1;5H   [93mreturn[m }
+[94m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [m[42;140H1,4[11CAll[42;140H[K[42;140H1,4[11CAll[1;8H[?12l[?25h[?25l[?12l[?25h[?25l[1;8H[K[42;1H--No lines in buffer--[42;140H[K[42;140H0,0-1[9CAll[1;5H[?12l[?25h[?25l[42;1H[1m-- INSERT --[m[42;13H[K[42;140H0,1[11CAll[1;5H[?12l[?25h[?25l[96m/* [m
+[93m  2 [m[96m *    hello world[m[2;22H[K[3;1H[93m  3 [m[96m *    */[m[3;13H[K[4;1H[93m  4 [m[4;5H[K[5;1H[93m  5 [m[38;5;81m#include [m[95m<stdio.h>[m[5;23H[K[6;1H[93m  6 [m[6;5H[K[7;1H[93m  7 [m[38;5;121mint[m main ([38;5;121mint[m argc, [38;5;121mchar[m *argv[]) {[7;40H[K[8;1H[93m  8 [m[8;5H[K[9;1H[93m  9 [m   printf([95m"hello world.[m[38;5;224m\n[m[95m"[m); [9;34H[K[10;1H[93m 10 [m[10;5H[K[11;1H[93m 11 [m   [93mreturn[m [95m0[m;[11;17H[K[12;1H[93m 12 [m}[12;6H[K[7;39H[46m{[12;5H}[m[42;140H12,2[12;6H[?12l[?25h[?25l[95m1[m[7;39H{[12;5H}[42;143H3[12;7H[?12l[?25h[?25l:[42;143H4[12;8H[?12l[?25h[?25l[95m1[m[42;143H5[12;9H[?12l[?25h[?25l[12;8H[K[42;143H4[12;8H[?12l[?25h[?25l[12;7H[K[42;143H3[12;7H[?12l[?25h[?25l[12;6H[K[7;39H[46m{[12;5H}[m[42;143H2[12;6H[?12l[?25h[42;1H[K[12;5H[?25l[42;140H12,1[10CAll[12;5H[?12l[?25h[?25l[42;140H[K[42;1H:[?12l[?25h1[?25l[?12l[?25h[?25l[7;39H{[12;5H}[42;140H1,1[11CAll[1;5H[?12l[?25h[?25l[42;140H2[2;5H[?12l[?25h[?25l[42;142H2[2;6H[?12l[?25h[?25l[96m    hello world[m[2;21H[K[2;6H[?12l[?25h[?25l[42;140H3[3;6H[?12l[?25h[?25l[96m    */[m[3;12H[K[3;6H[?12l[?25h[?25l[42;142H6[3;10H[?12l[?25h[?25l[1;5H/[1;6H[K[2;5H[K[3;5H[38;5;81m#include [m[95m<stdio.h>[m[5;5H[38;5;121mint[m main ([38;5;121mint[m argc, [38;5;121mchar[m *argv[]) {[7;5H   printf([95m"hello world.[m[38;5;224m\n[m[95m"[m); [7;34H[K[9;8H[93mreturn[m [95m0[m;[9;17H[K[10;5H}
+[94m~                                                                                                                                                            [12;1H~                                                                                                                                                            [m[42;140H1,1[1;5H[?12l[?25h[?25l[42;1H2 more lines; before #7  2 seconds ago[42;140H[K[1;5H[96m/* [2;5H     hello world[3;5H     */[m[3;12H[K[5;5H[38;5;81m#include [m[95m<stdio.h>[m[5;23H[K[7;5H[38;5;121mint[m main ([38;5;121mint[m argc, [38;5;121mchar[m *argv[]) {[9;8Hprintf([95m"hello world.[m[38;5;224m\n[m[95m"[m);[10;5H[K[11;1H[93m 11 [m   [93mreturn[m [95m0[m;[11;17H[K[12;1H[93m 12 [m}[12;6H[K[42;140H1,1[11CAll[1;5H[?12l[?25h[?25l[42;140H2[2;5H[?12l[?25h[?25l[42;140H3[3;5H[?12l[?25h[?25l[42;142H6[3;10H[?12l[?25h[?25l[96m*/[m[3;7H[K[42;142H1[3;5H[?12l[?25h[?25l[42;1H[K[42;1H:.,.+6[?12l[?25h7[?25l[?12l[?25h[?25l[7;39H[46m{[12;5H}[m[42;140H12,1[10CAll[12;5H[?12l[?25h[?25l[7;39H{[12;5H}[42;141H1,12[11;16H[?12l[?25h[?25l[42;144H1[11;15H[?12l[?25h[?25l[42;144H0[11;14H[?12l[?25h[?25l[42;143H9 [11;13H[?12l[?25h[?25l[42;143H8[11;12H[?12l[?25h[?25l[42;143H7[11;11H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25h7[?25l[?12l[?25h[?25l[139C7,1[11CAll[7;5H[?12l[?25h[?25l[42;143H9[7;23H[?12l[?25h[?25l[42;142H21[7;25H[?12l[?25h[?25l[42;143H6[7;30H[?12l[?25h[?25l[42;143H7[7;31H[?12l[?25h[?25largv[46m[][m[42;142H31[7;35H[?12l[?25h[?25l[42;1H[1m-- INSERT --[m[42;140H[K[42;140H7,31[10CAll[7;35H[?12l[?25h[?25l[46m [[m]) { [1C[46m][m[42;143H2[7;36H[?12l[?25h[42;1H[K[7;35H[?25l [][42;140H7,31[10CAll[7;35H[?12l[?25h[?25l[42;1H1 change; before #9  5 seconds ago[42;140H[K[7;35H[46m[][m) {[7;40H[K[42;140H7,31[10CAll[7;35H[?12l[?25h[?25l[42;1H[1m-- INSERT --[m[42;13H[K[42;140H7,31[10CAll[7;35H[?12l[?25h[?25l[46m [[m]) { [1C[46m][m[42;143H2[7;36H[?12l[?25h[42;1H[K[7;35H[?25l [][42;140H7,31[10CAll[7;35H[?12l[?25h[?25l[42;1H1 change; before #10  3 seconds ago[42;140H[K[7;35H[46m[][m) {[7;40H[K[42;140H7,31[10CAll[7;35H[?12l[?25h[?25l[42;143H2[7;36H[?12l[?25h[?25l[7;14H[46m([m[20C[][46m)[m[42;143H3[7;37H[?12l[?25h[?25l[42;1H[1m-- INSERT --[m[42;13H[K[42;140H7,33[10CAll[7;37H[?12l[?25h[?25l[7;14H([20C[46m[][m)[42;143H2[7;36H[?12l[?25h[?25l[7;14H[46m([m[20C[][46m)[m[42;143H3[7;37H[?12l[?25h[?25l[7;14H([20C[46m[][m)[42;143H2[7;36H[?12l[?25h[?25l[46m [m]) { [46m][m[42;143H3[7;37H[?12l[?25h[42;1H[K[7;36H[?25l[ ][42;140H7,32[10CAll[7;36H[?12l[?25h[?25l[42;140H[K[42;1H:[?12l[?25hwq[?25l[?12l[?25h[?25l"hello.c" 12L, 129C written
+[?1l>[?12l[?25h[?1049l]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ vim hello.c cat[C[C[C[C[C[C[C[C[C
+/* 
+     hello world
+*/
+
+#include <stdio.h>
+
+int main (int argc, char *argv[ ]) {
+
+   printf("hello world.\n"); 
+
+   return 0;
+}
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ gcc hello.c -o H[Khello
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ls -l
+total 32
+-rwxrwxr-x. 1 nzhuang1@gsuad.gsu.edu nzhuang1@gsuad.gsu.edu  8360 Jan 22 15:37 [0m[38;5;34mhello[0m
+-rw-rw-r--. 1 nzhuang1@gsuad.gsu.edu nzhuang1@gsuad.gsu.edu   129 Jan 22 15:35 hello.c
+-rw-rw-r--. 1 nzhuang1@gsuad.gsu.edu nzhuang1@gsuad.gsu.edu 16384 Jan 22 15:34 lab1.log
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ./hello 
+hello world.
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ gcc helloh[K.c -S
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ls
+[0m[38;5;34mhello[0m  hello.c  hello.s  lab1.log
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ cat hello.s
+	.file	"hello.c"
+	.section	.rodata
+.LC0:
+	.string	"hello world."
+	.text
+	.globl	main
+	.type	main, @function
+main:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$16, %rsp
+	movl	%edi, -4(%rbp)
+	movq	%rsi, -16(%rbp)
+	movl	$.LC0, %edi
+	call	puts
+	movl	$0, %eax
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	main, .-main
+	.ident	"GCC: (GNU) 4.8.5 20150623 (Red Hat 4.8.5-44)"
+	.section	.note.GNU-stack,"",@progbits
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ cp hello.s hello_original.s
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ vim hello.s
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;42r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[42;1H"hello.s" 29L, 504C[>c[1;9H[38;5;130m.file[m   "[36mhello[m.[36mc[m"[2;9H[38;5;130m.section[8C.rodata
+.LC[m0:[4;9H[38;5;130m.string[m "[36mhello[m [36mworld[m."[5;9H[38;5;130m.text[6;9H.globl[m  [36mmain[m[7;9H[38;5;130m.type[m   [36mmain[m, @[36mfunction
+main[m:
+[38;5;130m.LFB[m0:[10;9H[38;5;130m.cfi[m[36m_startproc[11;9Hpushq[m   %[36mrbp[m[12;9H[38;5;130m.cfi[m[36m_def_cfa_offset[m [31m16[m[13;9H[38;5;130m.cfi[m[36m_offset[m [31m6[m, -[31m16[m[14;9H[36mmovq[m    %[36mrsp[m, %[36mrbp[m[15;9H[38;5;130m.cfi[m[36m_def_cfa_register[m [31m6[m[16;9H[36msubq[m    $[31m16[m, %[36mrsp[17;9Hmovl[m    %[36medi[m, -[31m4[m(%[36mrbp[m)[18;9H[36mmovq[m    %[36mrsi[m, -[31m16[m(%[36mrbp[m)[19;9H[36mmovl[m    $[38;5;130m.LC[m[31m0,[m %[36medi[20;9Hcall[m    [36mputs[21;9Hmovl[m    $[31m0,[m %[36meax[22;9Hleave[m[23;9H[38;5;130m.cfi[m[36m_def_cfa[m [31m7[m, [31m8[m[24;9H[36mret[m[25;9H[38;5;130m.cfi[m[36m_endproc[m
+[38;5;130m.LFE[m0:[27;9H[38;5;130m.size[m   [36mmain[m, .-[36mmain[m[28;9H[38;5;130m.ident[m  "[36mGCC[m: ([36mGNU[m) [31m4[m.[31m8[m.[31m5[m [31m20150623[m ([36mRed[m [36mHat[m [31m4[m.[31m8[m.[31m5[m-[31m44[m)"[29;9H[38;5;130m.section[8C.note.GNU[m-[36mstack[m,"",@[36mprogbits[m
+[94m~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [m[42;140H1,2-9[9CAll[1;9H[?12l[?25h[27m[m[H[2J[?25l[1;9H[93m.file[m   "[1m[96mhello[m.[1m[96mc[m"[2;9H[93m.section[8C.rodata
+.LC[m0:[4;9H[93m.string[m "[1m[96mhello[m [1m[96mworld[m."[5;9H[93m.text[6;9H.globl[m  [1m[96mmain[m[7;9H[93m.type[m   [1m[96mmain[m, @[1m[96mfunction
+main[m:
+[93m.LFB[m0:[10;9H[93m.cfi[m[1m[96m_startproc[11;9Hpushq[m   %[1m[96mrbp[m[12;9H[93m.cfi[m[1m[96m_def_cfa_offset[m [95m16[m[13;9H[93m.cfi[m[1m[96m_offset[m [95m6[m, -[95m16[m[14;9H[1m[96mmovq[m    %[1m[96mrsp[m, %[1m[96mrbp[m[15;9H[93m.cfi[m[1m[96m_def_cfa_register[m [95m6[m[16;9H[1m[96msubq[m    $[95m16[m, %[1m[96mrsp[17;9Hmovl[m    %[1m[96medi[m, -[95m4[m(%[1m[96mrbp[m)[18;9H[1m[96mmovq[m    %[1m[96mrsi[m, -[95m16[m(%[1m[96mrbp[m)[19;9H[1m[96mmovl[m    $[93m.LC[m[95m0,[m %[1m[96medi[20;9Hcall[m    [1m[96mputs[21;9Hmovl[m    $[95m0,[m %[1m[96meax[22;9Hleave[m[23;9H[93m.cfi[m[1m[96m_def_cfa[m [95m7[m, [95m8[m[24;9H[1m[96mret[m[25;9H[93m.cfi[m[1m[96m_endproc[m
+[93m.LFE[m0:[27;9H[93m.size[m   [1m[96mmain[m, .-[1m[96mmain[m[28;9H[93m.ident[m  "[1m[96mGCC[m: ([1m[96mGNU[m) [95m4[m.[95m8[m.[95m5[m [95m20150623[m ([1m[96mRed[m [1m[96mHat[m [95m4[m.[95m8[m.[95m5[m-[95m44[m)"[29;9H[93m.section[8C.note.GNU[m-[1m[96mstack[m,"",@[1m[96mprogbits[m
+[94m~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [m[42;140H1,2-9[9CAll"hello.s" 29L, 504C[1;9H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h[?25l [?12l[?25hn[?25l[?12l[?25hu[?25l[?12l[?25hm[?25l[?12l[?25h...[?25lber[?12l[?25h[?25l[1;1H[93m  1 [m        [93m.file[m   "[1m[96mhello[m.[1m[96mc[m"
+[93m  2 [m        [93m.section[m        [93m.rodata
+  3 .LC[m0:
+[93m  4 [m        [93m.string[m "[1m[96mhello[m [1m[96mworld[m."
+[93m  5 [m        [93m.text
+  6 [m        [93m.globl[m  [1m[96mmain[m
+[93m  7 [m        [93m.type[m   [1m[96mmain[m, @[1m[96mfunction[m
+[93m  8 [m[1m[96mmain[m:
+[93m  9 .LFB[m0:
+[93m 10 [m        [93m.cfi[m[1m[96m_startproc[m
+[93m 11 [m        [1m[96mpushq[m   %[1m[96mrbp[m
+[93m 12 [m        [93m.cfi[m[1m[96m_def_cfa_offset[m [95m16[m
+[93m 13 [m        [93m.cfi[m[1m[96m_offset[m [95m6[m, -[95m16[m
+[93m 14 [m        [1m[96mmovq[m    %[1m[96mrsp[m, %[1m[96mrbp[m
+[93m 15 [m        [93m.cfi[m[1m[96m_def_cfa_register[m [95m6[m
+[93m 16 [m        [1m[96msubq[m    $[95m16[m, %[1m[96mrsp[m
+[93m 17 [m        [1m[96mmovl[m    %[1m[96medi[m, -[95m4[m(%[1m[96mrbp[m)
+[93m 18 [m        [1m[96mmovq[m    %[1m[96mrsi[m, -[95m16[m(%[1m[96mrbp[m)
+[93m 19 [m        [1m[96mmovl[m    $[93m.LC[m[95m0,[m %[1m[96medi[m
+[93m 20 [m        [1m[96mcall[m    [1m[96mputs[m
+[93m 21 [m        [1m[96mmovl[m    $[95m0,[m %[1m[96meax[m
+[93m 22 [m        [1m[96mleave[m
+[93m 23 [m        [93m.cfi[m[1m[96m_def_cfa[m [95m7[m, [95m8[m
+[93m 24 [m        [1m[96mret[m
+[93m 25 [m        [93m.cfi[m[1m[96m_endproc[m
+[93m 26 .LFE[m0:
+[93m 27 [m        [93m.size[m   [1m[96mmain[m, .-[1m[96mmain[m
+[93m 28 [m        [93m.ident[m  "[1m[96mGCC[m: ([1m[96mGNU[m) [95m4[m.[95m8[m.[95m5[m [95m20150623[m ([1m[96mRed[m [1m[96mHat[m [95m4[m.[95m8[m.[95m5[m-[95m44[m)"
+[93m 29 [m        [93m.section[m        [93m.note.GNU[m-[1m[96mstack[m,"",@[1m[96mprogbits[m[42;140H1,2-9[9CAll[1;13H[?12l[?25h[?25l[42;1H[K[42;1H:[?12l[?25h4[?25l[?12l[?25h[?25l[139C4,2-9[9CAll[4;13H[?12l[?25h[?25l[42;142H3-10[4;14H[?12l[?25h[?25l[42;142H10-17[4;21H[?12l[?25h[?25l[42;143H1-18[4;22H[?12l[?25h[?25l[?12l[?25h[?25l[42;140H1,2-9  [1;13H[?12l[?25h[?25l[42;140H4,11-18[4;22H[?12l[?25h[?25l[42;1H[1m-- REPLACE --[m[42;140H[K[42;140H4,11-18[7CAll[4;22H[?12l[?25h[?25l[1m[96mHello[m [42;143H2-19[4;23H[?12l[?25h[42;1H[K[4;22H[?25l[42;140H4,11-18[7CAll[4;22H[?12l[?25h[?25l[42;143H7-24[4;28H[?12l[?25h[?25l[42;1H[1m-- REPLACE --[m[42;140H[K[42;140H4,17-24[7CAll[4;28H[?12l[?25h[?25l[1m[96mWorld[m.[42;143H8-25[4;29H[?12l[?25h[42;1H[K[4;28H[?25l[42;140H4,17-24[7CAll[4;28H[?12l[?25h[?25l[42;140H[K[42;1H:[?12l[?25hW[?25l[?12l[?25hQ[?25l[?12l[?25h[?25l[42;3H[K[42;3H[?12l[?25h[?25l[42;2H[K[42;2H[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"hello.s" 29L, 504C written
+[?1l>[?12l[?25h[?1049l]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ diff hello_original.s hello.s
+4c4
+< 	.string	"hello world."
+---
+> 	.string	"Hello World."
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ gcc hello.o[Kc -o
+gcc: error: missing filename after ‘-o’
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ls
+[0m[38;5;34mhello[0m  hello.c  hello_original.s  hello.s  lab1.log
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ gcc -c hello.s
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ls
+[0m[38;5;34mhello[0m  hello.c  hello.o  hello_original.s  hello.s  lab1.log
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ gcc hello.o -o hello2
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ls
+[0m[38;5;34mhello[0m  [38;5;34mhello2[0m  hello.c  hello.o  hello_original.s  hello.s  lab1.log
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ./hello2
+Hello World.
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ gcc -v -c hello.s
+Using built-in specs.
+COLLECT_GCC=gcc
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o hello.o hello.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-c' '-mtune=generic' '-march=x86-64'
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ./hello
+hello world.
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ ./hello2
+Hello World.
+]0;nzhuang1@gsuad.gsu.edu@snowball:~[nzhuang1@gsuad.gsu.edu@snowball ~]$ exit
+exit
+
+Script done on Wed 22 Jan 2025 03:51:08 PM EST
