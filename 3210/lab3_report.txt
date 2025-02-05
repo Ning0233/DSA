@@ -1,0 +1,13 @@
+On line 17:
+in loop.c, it moves the value 0 into the memory location 4 bytes before the address in the %rbp register. In loop_derement it starts with move value 5 into the register. 
+On line 25:
+in loop.c, the instruction adds a immediate value 1 to the 32-bit value located at the memory address -4(%rbp). In loop_decrement, it subtracts 1
+On line 27,28:
+in loop.c, cmpl instruction compares the value at -4(%rbp) with 5.jle is the conditional jump, it checks if -4(%rbp) is greater than or equal to 5, the program jumps to .l3.  In loop_decrement, cmpl compare the value at -4(%rbp) to 0, jg is the conditional jump, if value at -4(%rnp) is less than 0, it jumps to .L3.
+##Questions: What did you change in the program to print numbers from 1 to 20? How difficult was it to figure out what to change? How difficult was it to make the change once you knew what to do, especially in relation to figuring out what to change?
+I changed the cmpl value 5 to 21, it was not hard to find out because on the above function the use of cmpl is well definied. the function will stop as soon as the value at -4(%rbp) is greater or euqal to 20. It didn't take long. 
+##Questions: If the loop variable is an integer, and you divide it by 2, is the result also an integer? Why or why not?
+yes, in C, integer division will be round down. Therefore the result is still an integer.
+##Question: Once you had it working for odd numbers, how easy was it to print the even numbers? (Use relative terms like "much more difficult", "somewhat more difficult", "about the same", "somewhat easier, and "much easier". Then state why.
+same, because not much is change expect one condition
+
