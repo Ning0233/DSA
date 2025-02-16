@@ -1,9 +1,14 @@
 def find_treasure_indices(gold_amounts, target):
-    com_dict = {}
+    hash = {}
     for _ in range(len(gold_amounts)):
-        com_dict 
-
-
+        hash[gold_amounts[_]] = _
+    
+    for _ in range(len(gold_amounts)):
+        complement = target - gold_amounts[_]
+        if complement in hash and hash[complement] != _:
+            return [_, hash[complement]]
+    return None
+    
 gold_amounts1 = [2, 7, 11, 15]
 
 target1 = 9
