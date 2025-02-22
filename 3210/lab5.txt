@@ -1,0 +1,26 @@
+1. the code will print the integer 100 to the standard output
+2. the code will terminate the program with an exit code of 100
+3. The "PC" stands for Program Counter. It holds the address of the next instruction to be executed.It changes from 0x00000004 to 0x00000008 because the instructions in RISC-V are typically 4 bytes long. After executing an instruction at 0x00000004, the PC increments by 4 to point to the next instruction at 0x00000008.
+4. x10 (a0): This register is used to hold the first argument for system calls or function calls.
+    li a0, 1 #This instruction loads the value 1 into register x10.
+    x11 (a1): This register is used to hold the second argument for system calls or function calls. 
+    li a1, 100 #This instruction loads the value 100 into register x11.
+5. The "Continue" button resumes the execution of the program until it hits the next breakpoint or completes execution. It allows the program to run without stepping through each instruction manually.
+6. The "Restart" button stops the current execution and restarts the program from the beginning. It resets the program state and the PC to the initial state.
+7. The "Step Out" button continues execution until the current function returns. It is useful for quickly finishing the execution of the current function and returning to the caller.
+8. Step Over: Executes the current line of code and moves to the next line, but if the current line contains a function call, it executes the entire function call without stepping through the function's internal instructions.
+Step Into: Executes the current line of code and, if the current line contains a function call, it steps into the function, allowing you to debug the function's internal instructions line by line.
+
+
+
+snippet:
+
+Starting program /Users/ran/cs/github/DSA/3210/HelloWorld.S
+
+Hello RISC-V World
+42 1
+Hello RISC-V World
+42 2
+Hello RISC-V World
+42 3
+Stop program execution! 
