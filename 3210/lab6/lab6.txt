@@ -1,0 +1,76 @@
+Part 1
+
+What would you need to change in the program to work with bytes instead?
+- lb instead of lw; sb instead of sw
+
+What would happen if you have a large value, such as int3, and load it as a byte? Try it, then explain why the value is what it is.
+- Only the lower 8 bits are loaded. Because bytes are 8 bits, 1000 will become 232.
+
+What would you need to change in the program to work with halfwords instead?
+- lh instead of lw; sh instead of sw
+
+Try using la x7, int1 followed by lw x6, 1(x7). What value do you get in x6? Why?
+- This will load a word from address of int1 with an offset of 1 byte. Because int1 is a word, this will result in reading the value at address int1+1, hence incorrect value.
+
+We have "sum" defined in the data section. What command(s) would we use to put the result (say, of an add command) into it?
+- la x7, sum         # Load the address of sum into x7
+- sw x10, 0(x7)      # Store the value of x10 (the sum) into the address of sum
+
+Part 2
+
+NO, Sub result 7
+
+Part 3
+
+Lines of Code for Loading Values:
+- 4 lines (loading addresses and values of int1 and int2).
+
+Lines of Code for Arithmetic Operations:
+- 1 line (subtraction operation).
+
+Lines of Code for Printing:
+- 18 lines (printing operands, operators, result, and new line).
+
+Part 4
+
+How the Computer Got the Result
+
+1. NOT Operation:
+   - Loaded the value of int1 (12) into x8.
+   - Performed the NOT operation on x8, resulting in -13 (inverting all bits).
+   - Stored the result in sum.
+   - Printed "Not result" followed by -13.
+
+2. NEG Operation:
+   - Loaded the value of int1 (12) into x8.
+   - Performed the NEG operation on x8, resulting in -12 (2's complement).
+   - Stored the result in sum.
+   - Printed "Neg result" followed by -12.
+
+Why We Skipped Loading a Value into s1
+- We did not use the s1 register because the operations were performed directly on temporary registers (x8, x11, x12). The s1 register was not necessary for these specific operations.
+
+Difference Between NOT Operation and 2's Complement
+
+- NOT Operation:
+   - Inverts all bits of the binary representation.
+   - Example: 12 (binary 0000 1100) becomes -13 (binary 1111 0011).
+
+- 2's Complement:
+   - Inverts all bits and adds 1.
+   - Example: 12 (binary 0000 1100) becomes -12 (binary 1111 0100).
+
+Part 5
+
+Can We Use the NOT Operation for the Same Purpose?
+- No, we cannot use the NOT operation for the same purpose as the neg operation. Here's why:
+
+- NOT Operation:
+   - The NOT operation inverts all bits of the binary representation of a number.
+   - Example: 12 (binary 0000 1100) becomes -13 (binary 1111 0011).
+
+- NEG Operation:
+   - The NEG operation computes the 2's complement of a number, effectively negating it.
+   - Example: 12 (binary 0000 1100) becomes -12 (binary 1111 0100).
+
+The NOT operation does not produce the same result as the NEG operation because it does not account for the addition of 1 required to compute the 2's complement. Therefore, using the NOT operation would not correctly negate the value for subtraction purposes.
