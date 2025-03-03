@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "C_home.C": "cpp",
+        "home.C": "cpp",
+        "Indro.C": "cpp",
+        "Intro.C": "cpp",
+        "variables.C": "cpp",
+        "dataType.C": "cpp",
+        "booleans.C": "cpp",
+        "arrays.C": "cpp",
+        "string.C": "cpp"
+    }
+}

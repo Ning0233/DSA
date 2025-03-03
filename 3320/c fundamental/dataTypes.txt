@@ -1,0 +1,39 @@
+int:    2 or 4 bytes
+float:  4bytes 6-7 decimals
+double: 8bytes, 15decimal digits
+char:   1bytes, single character/letter/number
+
+basic format specifiers:
+
+%d or %i:   int
+%f or %F:   float
+%lf:        double
+%c:         char
+%s:         string
+
+
+To store multiple characters, use strings:
+char myText[] = "Hello";
+printf("%s", myText);
+
+Decimal Precision
+
+set decimal Precision
+float myFloatNum = 3.5;
+double myDoubleNum = 19.99;
+
+printf("%f\n", myFloatNum);
+printf("%lf\n", myDoubleNum);
+
+printf("%f\n", myFloatNum);
+printf("%.1f\n", myFloatNum);
+printf("%.2f\n", myFloatNum);
+printf("%.4f\n", myFloatNum);
+
+int: 2,4 bytes
+float: 4 bytes
+double: 8 bytes
+char: 1 bytes
+
+int myInt;
+printf("%lu\n", sizeof(myInt));
