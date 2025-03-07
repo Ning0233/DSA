@@ -1,0 +1,15 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/ran/cs/github/DSA/3320/lab8/f'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C40, symSize: 0x1D0 }
+  - { offsetInCU: 0x2F5, offset: 0x2F5, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003C40, symSize: 0x1D0 }
+  - { offsetInCU: 0x347, offset: 0x347, size: 0x8, addend: 0x0, symName: __Z8additionff, symObjAddr: 0x1D0, symBinAddr: 0x100003E10, symSize: 0x20 }
+  - { offsetInCU: 0x381, offset: 0x381, size: 0x8, addend: 0x0, symName: __Z11subtractionff, symObjAddr: 0x1F0, symBinAddr: 0x100003E30, symSize: 0x20 }
+  - { offsetInCU: 0x3BB, offset: 0x3BB, size: 0x8, addend: 0x0, symName: __Z14multiplicationff, symObjAddr: 0x210, symBinAddr: 0x100003E50, symSize: 0x20 }
+  - { offsetInCU: 0x3F5, offset: 0x3F5, size: 0x8, addend: 0x0, symName: __Z8divisionff, symObjAddr: 0x230, symBinAddr: 0x100003E70, symSize: 0x20 }
+  - { offsetInCU: 0x42F, offset: 0x42F, size: 0x8, addend: 0x0, symName: __Z5powerff, symObjAddr: 0x250, symBinAddr: 0x100003E90, symSize: 0x30 }
+  - { offsetInCU: 0x469, offset: 0x469, size: 0x8, addend: 0x0, symName: __Z14floor_divisionff, symObjAddr: 0x280, symBinAddr: 0x100003EC0, symSize: 0x30 }
+  - { offsetInCU: 0x4A3, offset: 0x4A3, size: 0x8, addend: 0x0, symName: __Z3powB7v160006ff, symObjAddr: 0x2B0, symBinAddr: 0x100003EF0, symSize: 0x30 }
+  - { offsetInCU: 0x4E0, offset: 0x4E0, size: 0x8, addend: 0x0, symName: __Z5floorB7v160006f, symObjAddr: 0x2E0, symBinAddr: 0x100003F20, symSize: 0x16 }
+...

@@ -1,0 +1,43 @@
+***pt2 and pt3 does not work
+
+1. Why not use this instead?
+The reason you cannot use the second approach is that the la instruction loads the address of the label %x into the register a0, not the value at that address. The ecall expects the character to be printed to be in a0, not the address of the character. Therefore, you need to load the value at the address into a0 using lb (load byte).
+
+2. In Part 1, how many total lines are in the program? How many lines would there be if you did not use a macro? Explain how you get your answers.
+The total number of lines in the program can be counted by looking at the source code. If you did not use macros, you would have to replace each macro invocation with the actual instructions, which would increase the number of lines. For example, each instance of PRINT_STR would be replaced with the corresponding li and ecall instructions.
+
+3. Why do you think the RARS and VSCode/Venus environments use different registers and values for ecall?
+Different environments may use different conventions for system calls (ecall) due to differences in their implementation or design choices. These conventions are typically documented in the environment's user manual or reference guide.
+
+4. With a subroutine call as part of the program, how do the "step over" and "step into" buttons (for Venus) behave differently?
+Step Over: Executes the subroutine call as a single instruction, without stepping through the instructions inside the subroutine.
+Step Into: Steps into the subroutine, allowing you to execute and observe each instruction within the subroutine.
+
+5. Why do we need "ret" when we use "ecall" to exit the program? Explain.
+The ret instruction is needed to return from a subroutine to the caller. The ecall instruction is used to make a system call, which may not necessarily exit the program. If the system call does exit the program, the ret instruction will not be reached.
+
+6. Why does a subroutine need a ret instruction, but a macro does not?
+A subroutine needs a ret instruction to return control to the caller after execution. A macro, on the other hand, is expanded in place during preprocessing, so it does not have a separate control flow that requires returning.
+
+7. When you call a subroutine, how do you know if the registers will have the same values after it returns?
+You need to follow the calling convention, which specifies which registers must be preserved across subroutine calls. Typically, caller-saved registers (e.g., a0-a7) may be modified by the subroutine, while callee-saved registers (e.g., s0-s11) must be preserved by the subroutine.
+
+8. Suppose that it is important that your program remembers the value in register a0 after a subroutine call. What can you do outside of the subroutine to remember a0's value?
+You can save the value of a0 to a temporary register or memory location before calling the subroutine and restore it afterward.
+
+9. Suppose that you write a subroutine that other people might use. Your subroutine uses (i.e. changes) the a1 register. When someone else uses your subroutine, they may have something important in a1. What can you do inside of the subroutine so that a1's value is the same upon return as it was when the subroutine started?
+You can save the value of a1 to a temporary register or memory location at the beginning of the subroutine and restore it before returning.
+
+10. Does using a macro make a difference for the problem of remembering register values?
+Using a macro does not inherently solve the problem of preserving register values, as macros are simply expanded in place. You still need to ensure that registers are preserved according to the calling convention.
+
+11. The macro "print_char(char1)" works fine when you invoke it, where "char1" is defined in the data section. Suppose that you have the value in register a0 already, but you do not have it in memory, and use "print_char". Does it work? Why or why not?
+No, it does not work because the macro expects the address of the character in memory, not the value in a register. You would need to modify the macro to handle the value in the register.
+
+12. Suppose that you have the value in register a0 already, but you do not have it in memory. If you use a subroutine call such as "call print_int", does it work? Why or why not?
+Yes, it works because the subroutine can be designed to accept the value in the register and print it directly, as shown in the print_int subroutine.
+
+13. Which approach (macro versus subroutine) is likely to generate a larger executable program, and why?
+Using macros is likely to generate a larger executable program because each macro invocation is expanded in place, leading to code duplication. Subroutines, on the other hand, are defined once and can be called multiple times, reducing code duplication and resulting in a smaller executable.
+
+
