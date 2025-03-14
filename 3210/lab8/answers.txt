@@ -1,0 +1,34 @@
+What is the effect of ret in the simulator in this program?
+In the Venus simulator, the ret instruction does not stop the program. Instead, it attempts to return from a function by jumping to the address stored in the ra (return address) register. If ra is not properly set, this can lead to undefined behavior or an infinite loop.
+What should ret be replaced with?
+To properly exit the program, you should replace ret with an ecall instruction with the appropriate ecall ID for exiting the program. The ecall ID for exiting the program is 10.
+You may have noticed that to get the program working, we had to figure out what the code was supposed to do. What could the previous programmer have done to make this clear?
+The previous programmer could have added comments to explain the purpose of each section of the code and the intended behavior.
+When we have multiple instances of semi-colons, why would it be a bad idea to use a global find/replace operation on the code?
+Using a global find/replace operation on the code can be risky because it might unintentionally replace instances of the target string that should not be changed. For example, replacing all semi-colons with pound-signs globally could alter parts of the code where semi-colons are used correctly, such as in comments or string literals. It is better to review and replace each instance manually to ensure that only the intended changes are made.
+Try changing the line
+    int2: .word 5
+to
+    int2: .double 5
+then stepping through the program. What value is printed? What value does t0 get, and why?
+0, t0 will get an incorrect value because lw is used to load a 32-bit word, but int2 is defined as a 64-bit double. The lw instruction will only load the lower 32 bits of the double value, leading to an incorrect value in t0.
+How can you get rid of the breakpoints?
+Open the Breakpoints pane (usually on the left side).
+Right-click on the breakpoint you want to remove and select "Remove Breakpoint".
+Alternatively, click on the red dot in the gutter next to the line number to toggle the breakpoint off.
+What registers changed their values?
+t0: Changed when lw instruction is executed.
+a1: Changed when mv instruction is executed.
+a0: Changed before each ecall instruction.
+pc: Program counter changes with each instruction.
+Did any of the registers change unexpectedly, and if so, why do think that happened?
+t0 might change unexpectedly due to the mismatch between the .double directive and the lw instruction.
+What are the minimum and maximum values that PC has for this program?
+Minimum value of PC:
+The starting address of the main function.
+Maximum value of PC:
+The address of the last instruction before the program exits.
+As we advance from one instruction to the next, how much does PC's value change? Why?
+The PC typically increments by 4 bytes for each instruction in RISC-V, as each instruction is 4 bytes long.
+Is there a direct relationship to line number and PC? Why or why not?
+There is not a direct one-to-one relationship between line numbers and PC values. The PC increments by 4 bytes for each instruction, but line numbers in the source code can include comments, labels, and directives that do not correspond to executable instructions.
