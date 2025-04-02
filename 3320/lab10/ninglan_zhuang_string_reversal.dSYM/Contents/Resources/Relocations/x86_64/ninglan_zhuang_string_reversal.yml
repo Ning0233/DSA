@@ -1,0 +1,9 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/ran/cs/github/DSA/3320/lab10/ninglan_zhuang_string_reversal'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DC0, symSize: 0xF0 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003DC0, symSize: 0xF0 }
+  - { offsetInCU: 0x87, offset: 0x87, size: 0x8, addend: 0x0, symName: _reverseString, symObjAddr: 0xF0, symBinAddr: 0x100003EB0, symSize: 0x70 }
+  - { offsetInCU: 0xC7, offset: 0xC7, size: 0x8, addend: 0x0, symName: _swap, symObjAddr: 0x160, symBinAddr: 0x100003F20, symSize: 0x2C }
+...

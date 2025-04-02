@@ -1,0 +1,106 @@
+bash-4.2$ vim lab9_pt1.s 
+bash-4.2$ java -jar /home/mweeks/rars1_6.jar lab9_pt1.s 
+RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+
+Warning in /home/nzhuang1/3210/lab9/lab9_pt1.s line 9 column 5: RARS does not recognize the .set directive.  Ignored.
+
+Enter a char: a
+Enter an int: 13
+Enter a string: abc
+Number of chars read is: 4
+Enter a string: ^Cbash-4.2$ 
+
+bash-4.2$ vim lab9_pt2.s 
+bash-4.2$ java -jar /home/mweeks/rars1_6.jar lab9_pt2.s 
+RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+
+Warning in /home/nzhuang1/3210/lab9/lab9_pt2.s line 13 column 5: RARS does not recognize the .set directive.  Ignored.
+
+Enter a char: 2
+Enter an int: 13
+Enter a string: abc
+Number of chars read is: 4
+String read is: !abc
+!
+Int value read is: !13!
+Char value read is: !50!
+Enter a string: ^COpenJDK 64-Bit Server VM warning: Exception java.lang.OutOfMemoryError occurred dispatching signal SIGINT to handler- the VM may need to be forcibly terminated
+
+
+bash-4.2$ vim lab9_pt3.s 
+bash-4.2$ echo "7\n8\nabc" | java -jar /home/mweeks/rars1_6.jar lab9_pt3.s
+RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+
+Enter a char: Enter an int: bash-4.2$ echo "s\n42\ncat" |  java -jar rars1_6.jar lab9_pt3.s
+Error: Unable to access jarfile rars1_6.jar
+bash-4.2$  echo "s\n42\ncat" |  java -jar /home/mweeks/rars1_6.jar lab9_pt3.s
+RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+
+Enter a char: Enter an int: bash-4.2$ cat testfile.txt | java -jar /home/mweeks/rars1_6.jar lab9_pt3.s
+RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+
+Enter a char: bash-4.2$  java -jar /home/mweeks/rars1_6.jar lab9_pt3.s < testfile.txt
+RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+
+Enter a char: bash-4.2$ java -jar /home/mweeks/rars1_6.jar lab9_pt3.s > testout
+
+bash-4.2$ java -jar /home/mweeks/rars1_6.jar lab9_pt3.s > testout
+
+bash-4.2$ java -jar /home/mweeks/rars1_6.jar lab9_pt3.s < testfile.txt > testout
+bash-4.2$ diff testfile.txt testou
+0a1,4
+> RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+> 
+> 
+> Program terminated by calling exit
+bash-4.2$ diff testfile.txt testout
+0a1,3
+> RARS 1.6  Copyright 2003-2019 Pete Sanderson and Kenneth Vollmar
+> 
+> Enter a char: 
+\ No newline at end of file
+
+
+part1:
+1. Why are "Enter a string" and "Number of chars read is 0" on the same line?
+This happens because there is no newline (\n) character printed after the "Enter a string" prompt. When the program prints "Number of chars read is 0", it continues on the same line as the previous output. To fix this, you need to explicitly print a newline after the "Enter a string" prompt.
+
+2. What happens if the user enters "1" for "Enter a char" and "a" for "Enter an int"?
+If the user enters "1" for "Enter a char", it will work correctly because the program expects a single character. However, if the user enters "a" for "Enter an int", the program will attempt to interpret the ASCII value of 'a' (97) as an integer. This will not cause an error, but the stored value will be incorrect (97 instead of a valid integer).
+
+3. Did you (or the given code) need to do anything to make sure that the register holding the length is not over-written?
+Yes, the code ensures that the register holding the length of the string (a0) is not overwritten by saving it into another register (s0) immediately after the ecall for reading the string:     mv s0, a0       
+
+part2:
+1. Why are the exclamation marks on different lines?
+The newline (\n) is printed after the string but before the exclamation mark. To fix this, ensure the exclamation mark and newline are printed in the correct order.
+
+2. What happens if the user enters several strings before entering CTRL-D?
+The program processes each string one at a time, printing the number of characters read and the string itself after each input.
+
+3. Why is the char value reported as 50?
+The ASCII value of the character '2' (entered as the char) is 50. The program prints the ASCII value instead of the character itself.
+
+4. What happens if the user types CTRL-D (without entering anything else) the first time the program asks for a string?
+The program detects EOF immediately (a0 = 0) and exits without processing further.
+
+5. What happens if the user types CTRL-D (after entering "abc") the first time the program asks for a string?
+The program processes "abc", reports the number of characters read as 4 (including the newline), and then exits upon detecting EOF.
+
+6. If you enter a string that is larger than the buffer, how many chars read does the program report?
+The program reports the buffer size (100) as the number of characters read, as it cannot read beyond the buffer limit.
+
+7. If you enter a string that is larger than the buffer, then enter a string that is shorter and press CTRL-D, what does the program report as the string read, and why?
+The program reports the shorter string correctly because the buffer is reused for each input. The previous input does not affect the current one.
+
+part3:
+1. Do we get the same results whether the input comes from "echo", "cat", or input redirection ("<")?
+No, the results were different.
+
+2. Do we get the same results whether the output goes to the terminal or a file using output redirection (">")?
+Yes, the results were same
+
+3. What is the advantage of using input redirection and output redirection versus entering it interactively?
+input redirection: Reduces the chance of human error during input.
+output redirection: Captures program output for analysis, debugging, or comparison with expected results.
+
