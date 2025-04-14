@@ -1,133 +1,101 @@
 -------------------------------------------------------------------------------------------
-Starting program /Users/ran/cs/github/DSA/3210/lab11/array_print.S
+Starting program /Users/ran/cs/github/DSA/3210/lab11/string_copy.S
 
-10 20 30 40 50 60 
+82 73 83 67 45 86 32 65 115 115 101 109 98 108 121 32 80 114 111 103 114 97 109 109 105 110 103 0 RISC-V Assembly Programming
 Exited with error code 0
 Stop program execution!
 -------------------------------------------------------------------------------------------
-
-
--------------------------------------------------------------------------------------------
-Starting program /Users/ran/cs/github/DSA/3210/lab11/array_print_pt2.S
-
-10 30 60 100 150 210 
-Exited with error code 0
-Stop program execution!
--------------------------------------------------------------------------------------------
-
-Questions:
-1. How do you know if the series of values is correct?
-The output should be the cumulative sums of the array: 10 30 60 100 150 210. If the output matches this, the series is correct.
-
-2. How is the address of myarr_end different from temp?
-myarr_end is the address immediately after the last element of myarr.
-temp is a separate variable with its own address, unrelated to myarr.
-3. Registers before lw t1, 0(s0)
-s0 must hold the address of the current element in myarr.
-If not set, the program will access invalid memory.
-4. Why do we need lw t3, 0(t2) after la t2, temp?
-la t2, temp loads the address of temp.
-lw t3, 0(t2) retrieves the value stored at temp.
-
-5. Why addi s0, s0, 4 instead of 1?
-Each element in myarr is 4 bytes (word).
-Using addi s0, s0, 1 would cause unaligned memory access and incorrect results.
-
-6. Using define/equ/eqv for array length
-Define the array length symbolically: .equ ARRAY_LEN, 6
-Use it in the loop: li t0, ARRAY_LEN 
-
--------------------------------------------------------------------------------------------
-Starting program /Users/ran/cs/github/DSA/3210/lab11/array_print_pt3.S
-
-The array has the following values:
-10 20 30 40 50 60 
-The average value is:
-35The minimum value is:
-10The maximum value is:
-60Exited with error code 0
-Stop program execution!
--------------------------------------------------------------------------------------------
-
-Question
+Questions for Part 1
 1. 
-Start: min_val = 90, max_val = 90.
-Check 120: Update max_val = 120.
-Check 10: Update min_val = 10.
-Final: min_val = 10, max_val = 120.
-yes
+Remove the code that prints each character and the space:
+mv     a1, s0
+li     a0, 1
+ecall
+
+li    a0, 11
+li    a1, 32
+ecall
+Keep the final print of the copied string:
+li    a0, 4
+la    a1, copy
+ecall
 2. 
-Why 0 and 100,000 are inappropriate:
-min_val = 100,000: Array 10, 20, 30 → Incorrect min_val = 100,000.
-max_val = 0: Array 10, 20, 30 → Incorrect max_val = 0.
+bne s2, s4, loop compares the addresses in s2 and s4. If they are not equal, it jumps back to the loop label to continue copying.
+3. 
+If the buffer is too small, the program will overwrite memory beyond the allocated space, leading to undefined behavior or a segmentation fault.
+4. 
+The loop copies each byte, including the null terminator (\0) at the end of the string. The loop ends when s2 reaches mystring_end, ensuring the null terminator is copied.
+5. 
+To prove it copies the string, modify the original string (mystring) after copying and print both mystring and copy. If the copy remains unchanged, it confirms the string was copied.
+6. 
+copy: .word 0 initializes a single word to store the address of the allocated memory. The actual 100 bytes are allocated dynamically using sbrk. Using .word 100 would incorrectly allocate 4 bytes initialized to 100.
 
-Question:
+Starting program /Users/ran/cs/github/DSA/3210/lab11/string_copy copy 2.S
 
-Initialization:
-
-min_val = 90 (first value of the array).
-max_val = 90 (first value of the array).
-Step 1: Examine 90 (first value):
-
-Compare 90 with min_val (90): No update (90 is not less than 90).
-Compare 90 with max_val (90): No update (90 is not greater than 90).
-Step 2: Examine 120 (second value):
-
-Compare 120 with min_val (90): No update (120 is not less than 90).
-Compare 120 with max_val (90): Update max_val = 120 (120 is greater than 90).
-Step 3: Examine 10 (third value):
-
-Compare 10 with min_val (90): Update min_val = 10 (10 is less than 90).
-Compare 10 with max_val (120): No update (10 is not greater than 120).
-Final Results:
-
-min_val = 10
-max_val = 120
 
 -------------------------------------------------------------------------------------------
-Starting program /Users/ran/cs/github/DSA/3210/lab11/array_print_pt3.S
+Starting program /Users/ran/cs/github/DSA/3210/lab11/string_copy copy 2.S
 
-The array has the following values:
-90 120 10 
-The average value is:
-36The minimum value is:
-10The maximum value is:
-120Exited with error code 0
+"RISC-V Assembly Programming" 28
+Exited with error code 0
 Stop program execution!
 -------------------------------------------------------------------------------------------
 
-Question:
-1. Array with only one value (e.g., 90):
-Current Behavior: The program will work correctly because min_val and max_val are initialized to the first value (90), and no updates are needed.
-No Changes Needed: The program already handles this case correctly.
-2. Array is empty (no values):
-Problem: The program will fail because it tries to load the first value (lw t0, 0(s0)), but there is no data in the array.
-Solution: Add a check for an empty array before processing:
-Define the array length (ARRAY_LEN) using .equ or calculate it dynamically.
-If the length is 0, print a message like "The array is empty" and exit.
+Questions for Part 2
+1.
+lb loads a single byte (8 bits), which is the size of a character in ASCII. lw loads a word (32 bits), which would include extra bytes and not correctly handle single characters.
+2.
+The length would be incorrect because find_len counts bytes, not characters. Multi-byte characters (e.g., UTF-8) occupy more than one byte, so the reported length would be larger than the actual number of characters.
+3.
+Update the subroutine to use the new registers
+mv    t1, x0          # Use t1 instead of a1 for count
+lb    t2, 0(a0)       # Use t2 instead of t0 for the byte
+addi  t1, t1, 1       # Increment t1
+Update the caller to pass and retrieve values using the new registers:
+la    t0, mystring    # Use t0 instead of a0
+call  find_len
+mv    a1, t1          # Move result from t1 to a1
+4.
+No, it might not be obvious. A trailing space is visually indistinguishable from padding or formatting issues. To clarify, explicitly print the string enclosed in quotes (e.g., "string ").
 
 
-Question:
-1. Why is the average of 10, 11 reported as 5, not 5.5?
-The division in RISC-V is integer division, which truncates the decimal part. 21 / 2 = 5 (truncated). To handle decimals, floating-point operations are required.
+-------------------------------------------------------------------------------------------
+Starting program /Users/ran/cs/github/DSA/3210/lab11/string_copy copy 3.S
 
-2. Would the average still work if some values are negative? Why or why not?
-Yes, it would still work. Negative values are added to the sum, and the division would correctly compute the average, as RISC-V handles signed integers properly.
+2
+Exited with error code 0
+Stop program execution!
+-------------------------------------------------------------------------------------------
+Questions for Part 3
+1.
+No, blt (branch if less than) compares two registers and branches if the first is less than the second. In this case, we are comparing equality (bne or beq) to check if the character is a space. Using blt would not work because it does not check for equality.
+2.
+beq rs1, rs2, label: Branches to label if the values in rs1 and rs2 are equal.
+bne rs1, rs2, label: Branches to label if the values in rs1 and rs2 are not equal.
+3.
+Yes, the code still works. Each space is processed individually, and the count is incremented for every space, even if they are consecutive.
+4.
+Yes, the code still works. The first character is checked, and if it is a space, the count is incremented correctly.
 
-3. Would the average still work if all values are negative? Why or why not?
-Yes, it would still work. The sum of negative numbers is negative, and dividing by the number of elements would yield the correct negative average.
+-------------------------------------------------------------------------------------------
+Starting program /Users/ran/cs/github/DSA/3210/lab11/string_copy copy 4.S
 
-4. If the array is empty, what is a reasonable output?
-A reasonable output is a message like "The array is empty. No average, minimum, or maximum can be calculated." This avoids division by zero and provides meaningful feedback.
+RISC-v Assembly Programming
+RISC-V Assembly Programming
+not equal
+Exited with error code 0
+Stop program execution!
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+Starting program /Users/ran/cs/github/DSA/3210/lab11/string_copy copy 4.S
 
-5. Would the code still work for a very long array? Why or why not?
-Yes, it would work as long as:
-The sum does not exceed the range of a 32-bit signed integer (-2,147,483,648 to 2,147,483,647).
-The array length is manageable within the program's logic.
-If the sum exceeds the range, an overflow would occur, leading to incorrect results.
+RISC-V Assembly Programming
+RISC-V Assembly Programming
+not equal
+Exited with error code 0
+Stop program execution!
+-------------------------------------------------------------------------------------------
 
-6. How does the original array printing code compare to the final code?
-The original code only printed the array values, while the final code:
-Calculates the sum, minimum, maximum, and average.
-Prints additional messages and results.
-Comparison: The final code is significantly more complex, requiring additional logic for comparisons, arithmetic, and message handling. This is expected because finding the minimum, maximum, and average involves more operations than simply printing values.
+Questions for Part 4
+No, the original two strings are not the same. 
+Since string comparison in this program is case-sensitive, the lowercase 'v' and uppercase 'V' are treated as different characters, resulting in the strings being identified as "not equal."
